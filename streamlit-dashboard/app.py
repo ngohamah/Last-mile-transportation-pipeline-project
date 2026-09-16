@@ -17,12 +17,12 @@ st.set_page_config(
 # ---------------------------------------------------------------------------
 @st.cache_data(show_spinner="Loading & joining 96K+ orders…")
 def load_data():
-    orders = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/olist_orders_dataset.csv")
-    reviews = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/olist_order_reviews_dataset.csv")
-    customers = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/olist_customers_dataset.csv")
-    items = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/olist_order_items_dataset.csv")
-    products = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/olist_products_dataset.csv")
-    translations = pd.read_csv("https://raw.githubusercontent.com/ngohamah/verbose-dollop-data/refs/heads/master/product_category_name_translation.csv")
+    orders = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/olist_orders_dataset.csv")
+    reviews = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/olist_order_reviews_dataset.csv")
+    customers = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/olist_customers_dataset.csv")
+    items = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/olist_order_items_dataset.csv")
+    products = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/olist_products_dataset.csv")
+    translations = pd.read_csv("https://raw.githubusercontent.com/ngohamah/Last-mile-tranportation-pipeline-project-data/refs/heads/master/product_category_name_translation.csv")
 
     # Aggregate reviews: one row per order (prevent 1-to-many row explosion)
     reviews_agg = (
